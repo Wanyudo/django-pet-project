@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<header>This is header of HTML LAYOUT example page</header>
+<section>
+    <nav><a href="{% url 'index' %}">Index</a></nav>
+    <article>This is article</article>
+</section>
+
+{% endblock content %}

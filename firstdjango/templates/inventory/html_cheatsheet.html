@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<ul id="top-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+<a href="{% url 'index' %}">Back to index</a>
+<h1 id="first_heading">This is heading H1</h1>
+<h2>This is heading H2</h2>
+<h3>This is heading H3</h3>
+<h4>This is heading H4</h4>
+<h5>This is heading H5</h5>
+<h6>This is heading H6</h6>
+<a href="#feka">|Jump to feka, please|</a>
+
+<p>This is first paragraph. This is first paragraph. This is first paragraph. <br>
+   This is first paragraph. This is first paragraph. This is first paragraph. <br>
+   This is first paragraph. This is first paragraph. This is first paragraph. <br>
+</p>
+
+<p>This is second paragraph. This is second paragraph. This is second paragraph. <br>
+   This is second paragraph. This is second paragraph. This is second paragraph. <br>
+   This is second paragraph. This is second paragraph. This is second paragraph. <br> </p>
+
+<div>This is first div</div>
+<div>This is second div</div>
+<a href="{% url 'index'%}">This is a link</a>
+<br>
+<img title="Picture of space aircraft" src="{% static 'html_cheatsheet/example_photo.jpg' %}" alt="Image" width="420" height="260">
+<br>
+<button title="click me, pls">Button</button>
+<p>Ordered list:</p>
+<ol title="ordered list">
+    <li>Metal</li>
+    <li>Wood</li>
+    <li>Plastic</li>
+    <li>Glass</li>
+    <li>Organic</li>
+    <li>Fabric</li>
+</ol>
+<hr>
+<p>Unordered list:</p>
+<ul title="unordered list">
+    <li>Cereals</li>
+    <li>Fruits</li>
+    <li>Vegetables</li>
+    <li>Meat</li>
+</ul>
+<p title='Hello "there", good man!' style="color:red">Example of styled paragraph with title (hover over me)</p>
+<p>The pre tag preserves line breaks and spaces:</p>
+<pre style="background-color: rgb(255,255,200); width: 250px">
+    This is:
+        1) one      1
+        1.2) two    1
+    1      ~        1      Okey
+</pre>
+<p style="font-family:verdana; font-size:200%">Verdana font family!</p>
+<b>This is bold text</b>
+<br>
+<strong>This is strong text</strong>
+<br>
+<i>This is italic text</i>
+<br>
+<em>This is emphasized text</em>
+<br>
+<small>This is small text</small>
+<br>
+<mark>This is marked text</mark>
+<br>
+<del>This is deleted text</del>
+<br>
+<ins>This is inserted text</ins>
+<br>
+<sup>This is superscripted text</sup>
+<br>
+<q>Interesting short quotation HTML tag.</q>
+<br>
+<blockquote cite="http://9gag.com" style="width:200px">For 50 years, WWF has been protecting the future of nature.
+The world's leading conservation organization,
+WWF works in 100 countries and is supported by
+1.2 million members in the United States and
+close to 5 million globally.</blockquote>
+<br>
+<abbr title="BOM">Ballistic Octal Management</abbr> was founded now.
+<br>
+<address>
+    City: Moscow<br>
+    Street: Pushkina<br>
+    Address: Dom Kolotushkina 15 - 1<br>
+</address>
+<br>
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+<br>
+<bdo id="strange-text" dir="rtl">I don't believe that it can be useful..</bdo>
+<br>
+<h1 style="border:2px solid Tomato; background-color:rgba(190,190,190); padding: 20px; margin: 20px">Hello World</h1>
+<p class="funny_class">Funny text</p>
+<a href="http://rus.lsm.lv/" target="_blank" title="this is blue link">Latvian news portal <br><img title="Picture of space aircraft" src="{% static 'html_cheatsheet/example_photo.jpg' %}" alt="Image" style="width:420px; height:260px;"></a>
+<br>
+<a href="#first_heading" target="_blank">Jump upstairs!</a>
+<br>
+<a href="https://www.w3schools.com/html/html_links.asp#footer">jump to link id!</a>
+<br>
+<p>Resize me:</p>
+<picture>
+    <source media="(min-width: 1000px)" srcset="{% static 'html_cheatsheet/white-cheese.jpg' %}">
+    <source media="(min-width: 700px)" srcset="{% static 'html_cheatsheet/yellow-cheese.jpg' %}">
+    <img src="{% static 'html_cheatsheet/example_photo.jpg' %}" alt="Rocket" style="width:500px">
+</picture>
+<br>
+<table id="cheatsheet-table01">
+    <caption>Internal members</caption>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th >Age</th>
+        <th colspan="2">Access codes</th>
+    </tr>
+    <tr>
+        <td>Michael</td>
+        <td>Reynolds</td>
+        <td>32</td>
+        <td>ADA-1203</td>
+        <td>BSD1</td>
+    </tr>
+    <tr>
+        <td>Jim</td>
+        <td>Newman</td>
+        <td >15</td>
+        <td rowspan="2">ADA-1204</td>
+        <td rowspan="2">BSD5</td>
+    </tr>
+    <tr>
+        <td>Gordon</td>
+        <td>Freeman</td>
+        <td>28</td>
+    </tr>
+</table>
+<br>
+<ul style="list-style-type:disc">
+    <li>First</li>
+    <li>Second</li>
+</ul>
+<ol id="feka" start="165" type="I" style="margin-left:35px">
+    <li>First</li>
+    <ol type="i">
+        <li>Sub-one</li>
+        <li>Sub-two</li>
+    </ol>
+    <li>Second</li>
+    <li>Third</li>
+    <li>Fourth</li>
+    <li>Fifth</li>
+</ol>
+<dl>
+    <dt>Chinese tea</dt>
+    <dd>- tea from China</dd>
+    <dt>Xiaomi</dt>
+    <dd>- chinese smartphone</dd>
+</dl>
+<div style="background-color:#449988">div defines a section in a document(block-level) <span style="background-color: grey;">span defines a section in a document (inline)</span></div>
+<div class="tupka1">tupka1</div>
+<div class="tupka1 tupka2">tupka2</div>
+<div class="tupka1 tupka2 tupka3">tupka3</div><span class="tupka1 tupka2 tupka3">tupka3</span>
+<div class="parent-el">
+    this is parent
+    <div class="child-el">
+        ~this is child~
+    </div>
+</div>
+<div class="other-el">
+    new div
+</div>
+<iframe src="http://instantclick.io/" name="myframe" width="450" height="450" style="border: 2px solid green;"></iframe>
+<p id="medlink"><a href="http://meduza.io" target="myframe">Load meduza</a></p>
+<p id="demo" onclick="changeDemoText()">Demo text</p>
+<script>
+    document.getElementById("medlink").childNodes[0].href = 'http://lsm.lv';
+    function changeDemoText(){
+        if (document.getElementById("demo").innerHTML.includes("Modified")){
+            document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML.replace("Modified","");
+        } else
+        document.getElementById("demo").innerHTML = "Modified " + document.getElementById("demo").innerHTML;
+    }
+</script>
+<noscript>
+    document.getElementById("medlink").childNodes[0].href = 'http://pizza.lv';
+</noscript>
+{% endblock content %}

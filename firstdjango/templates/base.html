@@ -1,15 +1,66 @@
 {% load staticfiles %}
 <!doctype html>
-<html>
+<html lang="en-US">
 	<head>
-		<meta charset="utf-8">
 		<title>Inventory Project</title>
-		<meta name="description" content="">
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/jpg" href="{% static 'html_cheatsheet/favicon.jpg' %}">
+		<meta name="description" content="Regular pet-project">
+		<meta name="keywords" content="pet, project, django, python, html, javascript, css">
+		<meta name="author" content="Konstantins">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{% static 'main.css' %}">
+		<style>
+			.funny_class{
+				color: green;
+				font-size: 150%;
+				font-weight: bold;
+			}
+			#strange-text{
+				color: blue;
+			}
+
+			header {
+				background-color: #777;
+				padding: 30px;
+				text-align: center;
+				color: white;
+			}
+
+			section {
+				display: -webkit-flex;
+				display: flex;
+			}
+
+			nav {
+				-webkit-flex: 1;
+				-ms-flex: 1;
+				flex: 1;
+				background: #ccc;
+				padding: 20px;
+			}
+
+			article {
+				-webkit-flex: 3;
+				-ms-flex: 3;
+				flex: 3;
+				background-color: #f1f1f1;
+				padding: 10px;
+			}
+
+			@media (max-width: 600px) {
+				section {
+					-webkit-flex-direction: column;
+					flex-direction: column;
+				}
+			}
+
+		</style>
 	</head>
 	<body>
-		{% block content %}
+	    {% block content %}
 		{% endblock content %}
+        <div class="footer">Footer</div>
 		<script src="{% static 'main.js' %}"></script>
 	</body>
 </html>
