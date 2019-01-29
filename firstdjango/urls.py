@@ -21,6 +21,7 @@ from inventory import views
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
 	url(r'^cheatsheet/$', views.cheatsheet, name='cheatsheet'),
+	url(r'^htmlforms/$', views.htmlforms, name='htmlforms'),
 	url(r'^html_layout/$', views.htmllayout, name='htmllayout'),
 	url(r'^item/(?P<id>\d+)/', views.item_detail, name='item_detail'),
     url(r'^admin/', admin.site.urls),

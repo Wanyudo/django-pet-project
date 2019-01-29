@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p><strong><u>Always add 'name' attribute to each field in the form; otherwise data won't be sent</u></strong></p>
+<p>
+	<strong>GET method:</strong><br>
+<ul>
+	<li>Contains name/value pairs in result URL;</li>
+	<li>Good for sending result link to someone, e.g. google result link with info in address bar;</li>
+	<li>Is unsecure;</li>
+	<li>Can contain no more than 3000 symbols in result URL</li>
+</ul> <br>
+	<strong>POST method:</strong><br>
+<ul>
+	<li>Secure;</li>
+	<li>Doesn't include name/value pairs into result URL;</li>
+	<li>Can't be bookmarked;</li>
+	<li>Can contain any amount of data;</li>
+</ul>
+</p>
+
+<form action="/" method="post" autocomplete="off" name="gayform" oninput="subscription.value=parseInt(time.value)+parseInt(programs.value)*15; document.getElementById('timevalue').innerHTML = time.value;">
+	<fieldset style="width: 300px;">
+		<legend>Gay tester</legend>
+		Your first name:											<br>
+		<input type="text" name="firstname">						<br>
+		Your last name:												<br>
+		<input type="text" name="lastname">							<br>
+		<fieldset style="width: 200px;">
+			<legend>Orientation</legend>
+			<input type="checkbox" name="orientation" value="gay">Gay 		<br>
+			<input type="checkbox" name="orientation" value="maybegay">Maybe gay<br>
+			<input type="checkbox" name="orientation" value="probablygay">Probably gay<br>
+			<input type="checkbox" name="orientation" value="ignore"><del>not gay</del><br>
+		</fieldset>
+		<div>Religion:</div>
+		<select name="religion"size="4" multiple>
+			<option>Atheist</option>
+			<option>Christian</option>
+			<option>Muslim</option>
+			<option selected>Buddhist</option>
+			<option>Anarchist</option>
+			<option>Pohuist</option>
+		</select> <br>
+		<div>Beverages:</div>
+		<select name="beverage">
+			<optgroup label="Alcoholic">
+				<option>Vodka</option>
+				<option>Wine</option>
+				<option>Beer</option>
+			</optgroup>
+			<optgroup label="Non-alcoholic">
+				<option>Juicy</option>
+				<option>Tea</option>
+				<option>Coffee</option>
+			</optgroup>
+		</select><br>
+		<div>Write here why you think you're awesome:</div>
+		<textarea name="awesome" rows="5" cols="50" style="resize: none;">Write here...</textarea>
+		<div>Read news and relax:</div>
+		<button type="button" onclick="location.href = '/'">Read</button><br>
+		<div>Select car that you own:</div>
+		<input list="cars">
+		<datalist id="cars">
+			<option>VAZ</option>
+			<option>UAZ</option>
+			<option>BELAZ</option>
+			<option>VOLGA</option>
+			<option>ZAZ</option>
+			<option>LADA</option>
+		</datalist> <br>
+		Time (months): <input type="range" name="time" value="50"> <span id="timevalue"></span> <br>
+		Programs: <input type="text" name="programs" size="3" value="3"> <br>
+		Cost: <output name="subscription" for="time programs">0</output>&euro;<br>
+		Submit your info:											<br>
+		<input type="button" name="submit" value="Submit">			<br>
+	</fieldset>
+</form>
+
+{% endblock content %}

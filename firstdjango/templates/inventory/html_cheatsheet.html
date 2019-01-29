@@ -8,7 +8,6 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#about">About</a></li>
 </ul>
-<a href="{% url 'index' %}">Back to index</a>
 <h1 id="first_heading">This is heading H1</h1>
 <h2>This is heading H2</h2>
 <h3>This is heading H3</h3>
@@ -177,7 +176,7 @@ close to 5 million globally.</blockquote>
 </div>
 <iframe src="http://instantclick.io/" name="myframe" width="450" height="450" style="border: 2px solid green;"></iframe>
 <p id="medlink"><a href="http://meduza.io" target="myframe">Load meduza</a></p>
-<p id="demo" onclick="changeDemoText()">Demo text</p>
+<p id="demo" onclick="changeDemoText()">Demo text (click it)</p>
 <script>
     document.getElementById("medlink").childNodes[0].href = 'http://lsm.lv';
     function changeDemoText(){
@@ -190,4 +189,25 @@ close to 5 million globally.</blockquote>
 <noscript>
     document.getElementById("medlink").childNodes[0].href = 'http://pizza.lv';
 </noscript>
+
+<p style="width: 10vw; background-color: red;">10vw</p>
+<p style="width: 20vw; background-color: green;">20vw</p>
+<div class="left-query">Left</div>
+<div class="center-query">Center</div>
+<div class="right-query">Right</div>
+<p>blank</p>
+<p>blank2</p>
+<pre>
+    <code>
+        class Trapecy {                     <br>
+            int x;                          <br>
+            ArrayList&lt;Goblin&gt; gobs[]; <br>
+        }
+    </code>
+</pre>
+<p>This class pushes&#8209;variable <var>x</var> into array <var>gobs[]</var>.&copy;</p>
+<p>please, press <kbd>Ctrl+W</kbd></p>
+<p>If you make an error, PC will say <samp>Error!&copy;</samp></p>
+<p>Pay me 1500&euro;, please.</p>
+<p>E&#771;kay! &#15; &lt; &amp; </p>
 {% endblock content %}

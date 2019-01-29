@@ -25,7 +25,11 @@ SECRET_KEY = '*1+(jpsy*sv2!kh=+#mp*r#d7xz(t-&x4!k#@p7_4blyelk+)i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+CORS_ORIGIN_WHITELIST = (
+    '*'
+)
 
 
 # Application definition

@@ -106,11 +106,38 @@ table#cheatsheet-table01 th {
     color: red;
 }
 
-.footer{
+#footer{
     background-color: grey;
     font-size: 2em;
     color: white;
     font-weight: bold;
-    padding: 2em;
+    padding: 2em 0;
     text-align: center;
+    width: 100%;
+    bottom: 0;
+    margin-top: 10px;
+}
+
+.left-query{
+    float: left;
+    width: 20%;
+    background-color: red;
+}
+
+.center-query{
+    float: left;
+    width: 60%;
+    background-color: green;
+}
+
+.right-query{
+    float: left;
+    width: 20%;
+    background-color: cornflowerblue;
+}
+
+@media(max-width: 600px){
+    .left-query, .right-query, .center-query{
+        width: 100%;
+    }
 }

@@ -13,6 +13,9 @@ def cheatsheet(request):
 def htmllayout(request):
 	return render(request, 'inventory/html_layout.html')
 
+def htmlforms(request):
+	return render(request, 'inventory/htmlforms.html')
+
 def item_detail(request, id):
 	try:
 		item = Item.objects.get(id=id)

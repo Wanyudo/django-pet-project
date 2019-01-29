@@ -2,7 +2,10 @@
 
 {% block content %}
 	<a href="{% url 'cheatsheet' %}">HTML cheatsheet</a> <br>
-	<a href="{% url 'htmllayout' %}">HTML Layout example</a>
+	<a href="{% url 'htmllayout' %}">HTML Layout example</a><br>
+	<a href="{% url 'htmlforms' %}">HTML Forms</a><br>
+	<div id="croppedimg"></div>
+
 	<h1>Items in stock</h1>
 	<ul>
 		{% for item in items %}
