@@ -141,3 +141,10 @@ table#cheatsheet-table01 th {
         width: 100%;
     }
 }
+
+#dragndrop-placeholder{
+    width: 400px;
+    height: 100px;
+    border: 2px solid green;
+    padding: 10px;
+}

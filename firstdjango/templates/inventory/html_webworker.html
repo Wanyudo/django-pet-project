@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div>
+    <span>Interval: <input id="interval" type="number"></span>
+    <div>
+        <span>The counter:</span>
+        <span id="counter"></span>
+    </div>
+    <button id="start-ww" onclick="startWorker()">Start web worker</button>
+    <button id="stop-ww" onclick="stopWorker()">Stop web worker</button>
+</div>
+
+<script>
+    var worker;
+    function startWorker() {
+        if (typeof(Worker) !== "undefined") {
+            var interval = Number(document.getElementById("interval").value);
+            if (typeof(worker) == "undefined") {
+                worker = new Worker("{% static 'worker.js' %}");
+                worker.onmessage = function (event){
+                    document.getElementById("counter").innerHTML = event.data;
+                };
+                worker.postMessage(interval);
+            }
+        } else {
+            alert("NO Web worker support");
+        }
+    }
+    function stopWorker() {
+        if (typeof(worker) == "undefined")
+            return;
+        worker.terminate();
+        worker = undefined;
+    }
+</script>
+
+{% endblock content %}

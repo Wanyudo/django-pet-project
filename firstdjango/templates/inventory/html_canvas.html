@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<canvas id="myFirstCanvas" width="400" height="250" style="border: 1px solid black;">Some text...</canvas>
+<img id="imagka" src="{% static 'html_cheatsheet/example_photo.jpg' %}" alt="Image" width="420" height="260">
+
+{% endblock content %}

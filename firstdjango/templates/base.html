@@ -54,7 +54,12 @@
 					flex-direction: column;
 				}
 			}
-
+			yopta {
+			    display: block;
+			    background-color: #dddddd;
+			    padding: 30px;
+			    color: green;
+			}
 		</style>
 	</head>
 	<body>
@@ -63,5 +68,6 @@
 		{% endblock content %}
         <div id="footer">Footer</div>
 		<script src="{% static 'main.js' %}"></script>
+		<script src="{% static 'canvas.js' %}"></script>
 	</body>
 </html>

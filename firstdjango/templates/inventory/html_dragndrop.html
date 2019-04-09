@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<script src="{% static 'dragndrop.js' %}"></script>
+<div id="dragndrop-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<img id="draggable_img" alt="image to drag" src="{% static 'dragndrop/drag_img.png' %}" draggable="true" ondragstart="drag(event)" width="380" height="79">
+
+{% endblock content %}
